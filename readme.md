@@ -1,8 +1,14 @@
 # FACTORÍA DE TRANSPORTE
 
 Este proyecto consiste en indicar cuál es el coste total de un envío y el tipo de embalaje empleado, 
-según el tipo de transporte utilizado. Está basado en el patrón Factory. Explicaré brevemente los pasos
+según el tipo de transporte utilizado. Está basado en el patrón Factory.Explicaré brevemente los pasos
 a seguir:
+
+#### **- Diagrama de clases**
+Primero realizo el diagrama para tener una idea de lo que vamos a tratar en el proyecto, e iré complentándolo
+hasta que finalmente queda así:
+
+![Diagrama de clases](FactoriaDeTransporte.jpg)
 
 #### **- ITransportable**
 Es una interfaz en la cual creo dos métodos abstractos que implementaré despúes en las clases 
@@ -103,6 +109,4 @@ tipoTransp = FactoriaTransporte.getProducto(FactoriaTransporte.CAMION);
 Sería lo mismo para Bicicleta, cambiando las dimensiones y peso.
 
 
-#### **- Diagrama de clases**
 
-![Diagrama de clases](FactoriaDeTransporte.jpg)
