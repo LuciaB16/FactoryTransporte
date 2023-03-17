@@ -8,6 +8,10 @@ public class FactoriaTransporte {
      * Declaro la constante literal que indica que el transporte es bicicleta
      */
     public static final int BICICLETA = 2;
+    /**
+     * Declaro la constante literal que indica que el transporte es barco
+     */
+    public static final int BARCO = 3;
 
     /**
      * Método que devuelve el tipo de transporte
@@ -24,6 +28,9 @@ public class FactoriaTransporte {
 
             case BICICLETA:
                 return new Bicicleta();
+
+            case BARCO:
+                return new Barco();
 
             default:
                 return null;

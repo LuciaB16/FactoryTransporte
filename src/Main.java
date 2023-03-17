@@ -13,6 +13,10 @@ public class Main {
         System.out.println("El coste total es: " + tipoTransp.costeTotal(16500) + " euros");
         System.out.println(tipoTransp.tipoEmbalaje(20F, 20F, 20F, 3.5F));
 
+        tipoTransp = FactoriaTransporte.getProducto(FactoriaTransporte.BARCO);
+        System.out.println("El coste total es: " + tipoTransp.costeTotal(13000) + " euros");
+        System.out.println(tipoTransp.tipoEmbalaje(40F, 30F, 40F, 250F));
+
 
     }
 }
