@@ -8,7 +8,7 @@ a seguir:
 Primero realizo el diagrama para tener una idea de lo que vamos a tratar en el proyecto, e iré complentándolo
 hasta que finalmente queda así:
 
-![Diagrama de clases](FactoriaDeTransporte.jpg)
+
 
 #### **- ITransportable**
 Es una interfaz en la cual creo dos métodos abstractos que implementaré despúes en las clases 
@@ -70,6 +70,17 @@ En ambas clases declaro las constantes literales que me indican que tipo de emba
 (palet, caja de cartón o caja de madera).
 
 
+#### **- Barco**
+En esta clase y como dije anteriormente, implemento los métodos de la interfaz según
+lo que me pidan, quedando los métodos de la misma forma que en la clase Bicicleta
+pero con distintas dimensiones, peso y precio.
+
+En ambas clases declaro las constantes literales que me indican que tipo de embalaje es
+(palet, caja de cartón o caja de madera).
+Como vemos, podemos añadir los tipos de transporte que queramos en nuestro patrón.
+En este caso añadimos el barco en una nueva rama llamada "barco".
+
+
 #### **- FactoriaTransporte**
 Declaro constantes literales para los tipos de transporte Camion y Bicicleta.
 Se crea un método para que, mandando una opción, me devuelva el transporte correspondiente.
@@ -84,6 +95,9 @@ Se crea un método para que, mandando una opción, me devuelva el transporte cor
 
             case BICICLETA:
                 return new Bicicleta();
+                
+            case BARCO:
+                return new Barco();
 
             default:
                 return null;
@@ -106,7 +120,7 @@ tipoTransp = FactoriaTransporte.getProducto(FactoriaTransporte.CAMION);
         System.out.println("El coste total del envío es: " + tipoTransp.costeTotal(10500) + " euros");
         System.out.println(tipoTransp.tipoEmbalaje(70F, 70F, 70F, 45F));
 ```    
-Sería lo mismo para Bicicleta, cambiando las dimensiones y peso.
+Sería lo mismo para Bicicleta y Barco, cambiando las dimensiones y peso.
 
 
 
